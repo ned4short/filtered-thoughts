@@ -124,3 +124,15 @@ img { max-width: 100%; height: auto; }
 .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; }
 .site-footer ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; }
 .site-footer a { color: var(--muted); }
+
+/* Photos in posts */
+.article figure { margin: 24px 0; }
+.article figure img { display: block; width: 100%; border-radius: var(--radius); border: 1px solid var(--line); }
+.article figcaption { font-size: 0.9rem; color: var(--muted); margin-top: 8px; }
+.callout .callout-img { margin: 0 0 16px; }
+.callout .callout-img img { border: 0; }
+.article figure.tall { max-width: 440px; margin-left: auto; margin-right: auto; }
+.quick { border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius); padding: 18px 22px; margin: 24px 0; }
+.quick p { margin: 0 0 6px; }
+.quick ol { margin: 0; padding-left: 1.3em; }
+.article h3 { font-family: "Fraunces", Georgia, serif; font-size: 1.15rem; margin: 22px 0 4px; }
