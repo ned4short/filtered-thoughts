@@ -14,7 +14,7 @@ Live address (once set up): https://blog.nedworldwide.com
 ## Files
 - `index.html` – home page with the latest posts
 - `posts/` – one file per blog post
-- `category/` – Games, Home & Air, Web Projects, Ideas & Hobbies
+- `category/` – Games, Home Care, Web Projects, Ideas & Opinions
 - `about.html` – about Ned
 - `sitemap.xml`, `robots.txt` – help Google find every page
 - `CNAME` – tells GitHub to serve the site at blog.nedworldwide.com
