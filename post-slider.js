@@ -4,7 +4,7 @@
 (function () {
   var mount = document.querySelector('[data-post-slider]');
   if (!mount) return;
-  var links = Array.prototype.slice.call(document.querySelectorAll('.cards .card h3 a'));
+  var links = Array.prototype.slice.call(document.querySelectorAll('.cards .card a.card-link, .cards .card h3 a'));
   if (!links.length) { mount.remove(); return; }
 
   var css = [
@@ -33,10 +33,11 @@
   var slides = links.map(function (a) {
     var card = a.closest('.card');
     var meta = card && card.querySelector('.meta');
+    var h3 = card && card.querySelector('h3');
     return {
       href: a.getAttribute('href'),
-      title: a.textContent.trim(),
-      cat: meta ? meta.textContent.split('·')[0].trim() : ''
+      title: h3 ? h3.textContent.trim() : a.textContent.trim(),
+      cat: meta ? meta.textContent.split('\u00b7')[0].trim() : ''
     };
   });
 
