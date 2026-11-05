@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blog.nedworldwide.com/sitemap.xml
+Sitemap: https://filteredthoughts.nedwebservices.com/sitemap.xml
