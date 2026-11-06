@@ -1,6 +1,6 @@
 /* Filtered Thoughts post slideshow.
    Builds a clickable slideshow from the post cards already on the page,
-   using each post's preview image (og:image). New posts appear automatically. */
+   using a card's optional slideshow image or the post's preview image (og:image). */
 (function () {
   var mount = document.querySelector('[data-post-slider]');
   if (!mount) return;
@@ -36,6 +36,7 @@
     var h3 = card && card.querySelector('h3');
     return {
       href: a.getAttribute('href'),
+      image: a.getAttribute('data-slide-image'),
       title: h3 ? h3.textContent.trim() : a.textContent.trim(),
       cat: meta ? meta.textContent.split('\u00b7')[0].trim() : ''
     };
@@ -79,8 +80,9 @@
     b.type = 'button'; b.className = cls; b.setAttribute('aria-label', label); b.textContent = txt; return b;
   }
 
-  // Fetch each post's preview image (cached for the browser session).
+  // Use a dedicated slideshow image when the card supplies one.
   slides.forEach(function (s, i) {
+    if (s.image) { imgs[i].src = s.image; return; }
     var key = 'ps:' + new URL(s.href, location.href).pathname, cached = null;
     try { cached = sessionStorage.getItem(key); } catch (e) {}
     if (cached) { imgs[i].src = cached; return; }
