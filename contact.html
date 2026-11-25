@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Ned | Filtered Thoughts</title>
+<meta name="description" content="Get in touch with Ned, the San Antonio business owner behind Filtered Thoughts, Ned Air Filters, Ned Games and Ned Web Services.">
+<link rel="canonical" href="https://filteredthoughts.nedwebservices.com/contact.html">
+<meta property="og:site_name" content="Filtered Thoughts">
+<meta property="og:title" content="Contact Ned | Filtered Thoughts">
+<meta property="og:description" content="Get in touch with Ned, the San Antonio business owner behind Filtered Thoughts, Ned Air Filters, Ned Games and Ned Web Services.">
+<meta property="og:url" content="https://filteredthoughts.nedwebservices.com/contact.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=4">
+<script async src="https://nedtraffic.replit.app/api/tracker.js" data-site="8d4fe314-731c-4f7d-b995-0511e27c2706"></script>
+<style>
+.contact-form{display:grid;gap:16px;margin-top:28px}
+.contact-form label{display:grid;gap:6px;font-weight:600;font-size:.95rem}
+.contact-form input,.contact-form textarea{width:100%;font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.contact-form textarea{min-height:170px;resize:vertical}
+.contact-form input:focus,.contact-form textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+.contact-form button{justify-self:start;font:inherit;font-weight:600;background:var(--accent);color:var(--accent-ink);border:0;border-radius:999px;padding:12px 26px;cursor:pointer}
+.contact-form button:hover{filter:brightness(1.08)}
+.contact-form[hidden],.contact-sent[hidden]{display:none}
+.contact-form .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.contact-note{font-size:.9rem;color:var(--muted)}
+.contact-sent{background:var(--accent-soft);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin-top:28px}
+.contact-sent h2{margin-top:0}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">Filtered <span>Thoughts</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="category/games.html">Games</a>
+      <a href="category/home-and-air.html">Home Care</a>
+      <a href="category/web-projects.html">Web Projects</a>
+      <a href="category/ideas-and-opinions.html">Ideas & Opinions</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="article">
+  <h1>Contact Ned</h1>
+  <p class="lede">Have a question about a post, an idea, or just want to say hi? Send me a message and I'll get back to you.</p>
+  <div class="contact-sent" id="sent" hidden>
+    <h2>Thanks, your message was sent!</h2>
+    <p>I'll get back to you as soon as I can. In the meantime, feel free to keep reading <a href="index.html">Filtered Thoughts</a>.</p>
+  </div>
+  <div class="contact-sent" id="notsent" hidden>
+    <p><strong>Sorry, your message didn't go through.</strong> Please check your name, email and message and try again, or reach me through <a href="https://ned4short.com/#contact">ned4short.com</a>.</p>
+  </div>
+  <form class="contact-form" id="contact-form" action="https://ned4short.com/contact.php" method="post">
+    <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+    <label>Name <input type="text" name="name" autocomplete="name" required maxlength="100"></label>
+    <label>Email <input type="email" name="email" autocomplete="email" required maxlength="150"></label>
+    <label>Message <textarea name="message" required maxlength="5000"></textarea></label>
+    <button type="submit">Send message</button>
+    <p class="contact-note">Your info is only used to reply to you. See the <a href="privacy.html">Privacy Policy</a>.</p>
+  </form>
+</main>
+<script>
+var sent = new URLSearchParams(location.search).get('sent');
+if (sent === '1') {
+  document.getElementById('sent').hidden = false;
+  document.getElementById('contact-form').hidden = true;
+} else if (sent === '0') {
+  document.getElementById('notsent').hidden = false;
+}
+</script>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>&copy; 2026 Filtered Thoughts &middot; by Ned &middot; San Antonio, TX</div>
+    <ul>
+      <li><a href="https://www.nedairfilters.com">Ned Air Filters</a></li>
+      <li><a href="https://www.nedairfilters.com/games">Ned Games</a></li>
+      <li><a href="https://nedwebservices.com">Ned Web Services</a></li>
+      <li><a href="https://nedworldwide.com">Ned Worldwide</a></li>
+      <li><a href="https://www.youtube.com/@ned4short">YouTube</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+    </ul>
+  </div>
+</footer>
+<div data-ned-ads></div>
+<script async src="https://ads.nedwebservices.com/widget.js"></script>
+</body>
+</html>
